@@ -12,8 +12,7 @@ public class AlternativeDevice{
 	
 	@Override
 	public String toString() {
-		String currentStatus = status.isTurnedOn() ? " turned ON" : " turned OFF";
-		return "Device is" + currentStatus;
+		return "Device is " + status.toString();
 	}
 	
 	public void turnOn() {
@@ -25,7 +24,7 @@ public class AlternativeDevice{
 	}
 	
 	private enum Status {
-		ON {
+		ON("turned ON") {
 			Status turnOn() {
 				return this;
 			}
@@ -39,7 +38,7 @@ public class AlternativeDevice{
 				return true;
 			}
 		},
-		OFF {
+		OFF("turned OFF") {
 			Status turnOn() {
 				System.out.println("Turning on...");
 				return ON;
@@ -53,6 +52,17 @@ public class AlternativeDevice{
 				return false;
 			}
 		};
+		
+		private String description;
+		
+		private Status(String description) {
+			this.description = description;
+		}
+
+		@Override
+		public String toString() {
+			return description;
+		}
 		
 		abstract Status turnOn();
 		
