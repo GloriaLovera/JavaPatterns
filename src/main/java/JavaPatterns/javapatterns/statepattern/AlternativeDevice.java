@@ -25,7 +25,7 @@ public class AlternativeDevice{
 	}
 	
 	private enum Status {
-		ON("turned ON") {
+		ON {
 			Status turnOn() {
 				return this;
 			}
@@ -39,7 +39,7 @@ public class AlternativeDevice{
 				return true;
 			}
 		},
-		OFF("turned OFF") {
+		OFF {
 			Status turnOn() {
 				System.out.println("Turning on...");
 				return ON;
@@ -53,17 +53,6 @@ public class AlternativeDevice{
 				return false;
 			}
 		};
-		
-		private String description;
-		
-		private Status(String description) {
-			this.description = description;
-		}
-
-		@Override
-		public String toString() {
-			return description;
-		}
 		
 		abstract Status turnOn();
 		
