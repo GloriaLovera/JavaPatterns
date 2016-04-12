@@ -1,4 +1,4 @@
-package javapatterns.callbackpattern;
+package javapatterns.observerpattern;
 
 public class AlternativeListenerImpl implements Listener{
 	
