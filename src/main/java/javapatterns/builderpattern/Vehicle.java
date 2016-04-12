@@ -1,7 +1,5 @@
 package javapatterns.builderpattern;
 
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Builder design pattern is used in case of complex object
@@ -123,8 +121,7 @@ public class Vehicle {
 	}
 
 	public static void main(String[] args) {
-		List<Vehicle> vehicles = new ArrayList<Vehicle>();
-		vehicles.add(
+		System.out.println(
 				Vehicle.with()
 				.vtype(VehicleType.CAR)
 				.brand("AUDI")
@@ -135,7 +132,6 @@ public class Vehicle {
 				.proprietaryId("LVRGLR88d54F725J")
 				.build()
 				);
-		System.out.println(vehicles.get(0));
 	}
 	
 }
