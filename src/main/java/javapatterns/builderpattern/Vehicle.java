@@ -1,4 +1,4 @@
-package JavaPatterns.javapatterns.builderpattern;
+package javapatterns.builderpattern;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +24,10 @@ public class Vehicle {
 	private String proprietaryId;
 	private String model;
 	
+	public static Builder with() {
+		return new Builder();
+	}
+	
 	public static class Builder {
 		
 		private VehicleType vtype = VehicleType.MOTORCYCLE;
@@ -33,6 +37,8 @@ public class Vehicle {
 		private int registration = -1;
 		private String proprietaryId = "";
 		private String model = "";
+		
+		private Builder() {}
 		
 		public Vehicle.Builder vtype(VehicleType vtype) {
 			this.vtype = vtype;
@@ -119,7 +125,7 @@ public class Vehicle {
 	public static void main(String[] args) {
 		List<Vehicle> vehicles = new ArrayList<Vehicle>();
 		vehicles.add(
-				new Vehicle.Builder()
+				Vehicle.with()
 				.vtype(VehicleType.CAR)
 				.brand("AUDI")
 				.model("A3")

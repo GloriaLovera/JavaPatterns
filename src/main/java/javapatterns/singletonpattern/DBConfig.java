@@ -1,4 +1,4 @@
-package JavaPatterns.javapatterns.singletonpattern;
+package javapatterns.singletonpattern;
 
 /**
  * The singleton design pattern details a class implementation

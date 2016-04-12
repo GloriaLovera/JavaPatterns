@@ -1,4 +1,4 @@
-package JavaPatterns.javapatterns.builderpattern;
+package  javapatterns.builderpattern;
 
 public enum VehicleType {
 	CAR,

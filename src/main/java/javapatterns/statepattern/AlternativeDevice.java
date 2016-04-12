@@ -1,4 +1,4 @@
-package JavaPatterns.javapatterns.statepattern;
+package javapatterns.statepattern;
 
 /**
  * enum can be used instead of state pattern proposed in Device class.

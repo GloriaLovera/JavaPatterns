@@ -1,4 +1,4 @@
-package JavaPatterns.javapatterns.singletonpattern;
+package javapatterns.singletonpattern;
 
 public class TestSingleton {
 	

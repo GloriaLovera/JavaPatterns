@@ -1,15 +1,13 @@
-package JavaPatterns.javapatterns.singletonpattern;
+package javapatterns.singletonpattern;
 
-public class TestSupportClass1 {
-	
+public class TestSupportClass2 {
 	private DBConfig dbConnectionParams;
 
-	public TestSupportClass1() {
+	public TestSupportClass2() {
 		this.dbConnectionParams = DBConfig.getInstance();
 	}
 
 	public DBConfig getDbConnectionParams() {
 		return dbConnectionParams;
 	}
-
 }

@@ -1,4 +1,4 @@
-package JavaPatterns.javapatterns.statepattern;
+package javapatterns.statepattern;
 
 /**
  * State Pattern is used to implement the transaction of a property
